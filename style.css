@@ -119,3 +119,8 @@ input[type="Email"]::placeholder {
     color: darkblue;
     background-color: blueviolet;
 }
+
+.Psudotestwo:hover::first-line {
+    color: chocolate;
+    background-color: cyan;
+}
