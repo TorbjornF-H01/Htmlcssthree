@@ -1,0 +1,121 @@
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+h1::first-letter {
+    text-decoration: line-through;
+    border: 1px rgb(158, 13, 125);
+    padding: 5px;
+    margin: 3px;
+    /* float: right; lmao */
+    /* font, color, background, margin, padding, border & more*/
+}
+
+/* can use psudo element, have to write in proper order */
+h1:hover::first-letter {
+    background-color: chartreuse;
+    color: blue;
+}
+
+/* Pseudo-Elements only works block level */
+/* 
+::first-line
+::first-letter
+::before
+::after
+::marker
+::selection
+::placeholder
+*/
+
+/* Pseudo-element is used to add a special style to the first line of a text
+* font properties
+* color properties
+* and so on!
+*/
+.span {
+    color: black
+}
+
+p {
+    color: brown;
+    background-color: blanchedalmond;
+    width: 500px;
+}
+
+/* hover over the first line to read about what styling works */
+p::first-line {
+    color: blueviolet;
+    background-color: cadetblue;
+    letter-spacing: 3px;
+    text-decoration: line-through;
+    /* padding: 5px;  does not work
+        border: does not work
+    
+    */
+}
+
+/* both can be used */
+p::first-letter {
+    text-decoration: line-through;
+    border: 2px green;
+    padding: 5px;
+    margin: 2px;
+}
+
+/* check selector specificity 
+(0.1.1)*/
+/* .pseudo::first-line{
+/* (0.1.2) */
+/* }
+p.pseudo::first-line{}  */
+
+.para::before {
+    content: '🤑$';
+    color: green;
+}
+
+/* have to use seperatly */
+.para::after {
+    content: '🤑$';
+    color: red;
+}
+
+ul li {
+    color: darkblue;
+    font-size: larger;
+}
+
+/* for list use marker for the bullet point */
+ul li::marker {
+    color: crimson;
+}
+
+ol li::marker {
+    color: blue;
+}
+
+/* only paragraph */
+p::selection {
+    background-color: greenyellow;
+    color: white;
+}
+
+/* 
+I am now a Wizard! komplett.no
+::selection {
+    background-color: greenyellow;
+    color: white;
+} */
+
+/* All placeholder */
+::placeholder {
+    color: crimson;
+}
+
+/* if you have more placeholders and want to style them different you can single target */
+input[type="Email"]::placeholder {
+    color: darkblue;
+    background-color: blueviolet;
+}
